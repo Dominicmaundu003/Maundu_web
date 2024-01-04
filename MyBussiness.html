@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .card {
+                border: 1px solid #ccc;
+                background-color: ivory;
+                margin: 25px;
+                padding: 25px;
+                box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
+            }
+            @media screen and (min-windth: 50em) {
+                .card {
+                   flex-basis: 325px;
+                }
+                header h1 {
+                    font-size: 5em;
+                }
+            }
+            .icons {
+                font-size: 8em;
+                padding: 25px;
+                border-radius: 50%;
+            }
+            button, .button {
+                background: royalblue;
+                border: 0;
+                color: white;
+                padding: 10px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .blue {
+                background: teal;
+            }
+            .table {
+                margin: auto;
+                width: 100%;
+            }
+            #my-order {
+                background-color: #29C1C4;
+                padding:25px;
+                display:none;
+            }
+            .footer {
+                padding: 30px;
+                backgbackground: grey;
+            }
+            .circle {
+                color:white;
+                font-size: 2.5em;
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                margin: 15px;
+                border-radius: 50%;
+                background: deeppink;
+                padding: 5px 10px 15px 10px;
+                font-family: helvetica;
+            }
+        </style
+    </head>
+    <body>
+        <header style="letter-spacing: 6px; background: royalblue; padding: 20px; color: white;">
+            <h1>Maundu Electronics</h1>
+            <h4>Digital Electronics and Accessories</h4>
+        </header>
+        <section style="padding: 30px; margin-bottom: 40px;">
+           <h2 style="font-size: 2em; windth: 100%">Welcome</h2>
+           <p>VISSION:To provide you with original and durable materials</p> <Br/> <Br/>
+           <p>About Us:Founded on 2021,by Maundu Kyalo.we deliver our products countrywide and have served many customers.</p>
+        </section>
+        <section class="container">
+            <h2>OUR TEAM//</h2>
+            <article class="card">
+                <div class="icons"><img height="120px" border-radius="50%" src="/storage/emulated/0/Xender/image/f7ad2f7271f24d9085cf7d0a8998ff5c.jpg" ></div>
+                <h3>Maundu Kyalo</h3>
+                <p>Founder-He is the enterprenuer and the risk taker</p>
+                <button>contact</button>
+            </article>
+            <article class="card">
+                <div class="icons"><img height="120px" src="myimages/samuel.png"></div> 
+                <h3>Samuel Maithya</h3>
+                <p>Business manager-controls and manages in and out flow of goods</p>
+                <button>contact</button>
+            </article>
+            <article class="card">
+                <div class="icons"><img height="120px" src="myimages/mumo.png"></div>
+                <h3>David Mumo</h3>
+                <p>Supplier-He distributes our goods to various parts of the country</p>
+                <button>contact</button>
+            </article>
+        </section>
+        <section>
+            <h2>MY ORDER</h2>
+            <form id="my-form">
+            <table style="windth: 100%; margin: auto">
+                <th>Orders</th>
+                <tr>
+                    <TD>My name</TD>
+                    <TD>
+                        <input type="text" size="15" name="myName" >
+                    </TD>
+                </tr>
+                <tr>
+                    <TD>Product to order</TD>
+                    <TD><select name="my-product">
+                        <option>HIFI stereo system</option>
+                        <option>GDsolar</option>
+                        <option>torch</option>
+                        <option>mobile phones</option>
+                        <option>Sony radio</option>
+                        <option>TV</option>
+                        <option>Woofer</option>
+                        <option>light bulb</option>
+                        <option>dlight solar</option>
+                    </select></TD>
+                </tr>
+                <tr>
+                    <TD>Quantity</TD>
+                    <TD>
+                        <input type="number" name="myQuantity" value="null" min="1" max="10" >
+                    </TD>
+                </tr>
+                <Br> <br>
+                <tr>
+                    <TD><input class="button" type="button" value="process order" onclick="placeOrder();"></TD>
+                    <TD><input class="button" type="reset" value="clear"></TD>
+                </tr>
+            </table>
+            <Br/>
+            <div id="my-order"></div>
+            </form>
+        </section>
+        <section>
+            <form>
+                <h1>Survey form</h1>
+                what is the silliest idea you have ever had? <Br/>
+                <input type="text" size="40"> <Br/><Br/>
+                <button>Submit</button>
+            </form>
+        </section>
+        <section style="background-color: grey">
+        <div id="footer"><h3>Thanks for visiting</h3><div class="container">
+            <article class="card">
+                <h3>Get in Touch</h3>
+                <p>Probably the best place to buy electronics.</p>
+            </article>
+            <article class="card">
+                <h3>Contact Us</h3>
+                <p>
+                    We would love to hear from your
+                    <Br/>Call or email us.<Br/>
+                    Mobile:0769234294<Br>
+                    email: maunduk33@gmail.com
+                </p>
+            </article>
+            </div>
+            <div class="circle">M</div>
+            <div class="circle">E</div>
+            <div class="circle">A</div> <Br/>
+            &copy;2022 Maundu Electronics
+        </div>
+        </section>
+        <script>
+           function placeOrder() {
+               var orderForm= document.getElementById("my-form");
+                results = "<h3>Success!</h3>Here is your order";
+                var orderResults = document.getElementById("my-order");
+                orderResults.style.display= "block";
+                orderResults.innerHTML = results;
+            }
+        </script>
+    </body>
+</html>
