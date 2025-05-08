@@ -1,180 +1,101 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <style>
-            .container {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            .card {
-                border: 1px solid #ccc;
-                background-color: ivory;
-                margin: 25px;
-                padding: 25px;
-                box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
-            }
-            @media screen and (min-windth: 50em) {
-                .card {
-                   flex-basis: 325px;
-                }
-                header h1 {
-                    font-size: 5em;
-                }
-            }
-            .icons {
-                font-size: 8em;
-                padding: 25px;
-                border-radius: 50%;
-            }
-            button, .button {
-                background: royalblue;
-                border: 0;
-                color: white;
-                padding: 10px;
-                width: 100%;
-                margin-bottom: 10px;
-            }
-            .blue {
-                background: teal;
-            }
-            .table {
-                margin: auto;
-                width: 100%;
-            }
-            #my-order {
-                background-color: #29C1C4;
-                padding:25px;
-                display:none;
-            }
-            .footer {
-                padding: 30px;
-                backgbackground: grey;
-            }
-            .circle {
-                color:white;
-                font-size: 2.5em;
-                display: inline-block;
-                height: 40px;
-                width: 40px;
-                margin: 15px;
-                border-radius: 50%;
-                background: deeppink;
-                padding: 5px 10px 15px 10px;
-                font-family: helvetica;
-            }
-        </style
+        <title>Hybrid Technologies</title>
+        <link rel="stylesheet" href="styles.css">
+
     </head>
     <body>
-        <header style="letter-spacing: 6px; background: royalblue; padding: 20px; color: white;">
-            <h1>Maundu Electronics</h1>
-            <h4>Digital Electronics and Accessories</h4>
-        </header>
-        <section style="padding: 30px; margin-bottom: 40px;">
-           <h2 style="font-size: 2em; windth: 100%">Welcome</h2>
-           <p>VISSION:To provide you with original and durable materials</p> <Br/> <Br/>
-           <p>About Us:Founded on 2021,by Maundu Kyalo.we deliver our products countrywide and have served many customers.</p>
-        </section>
-        <section class="container">
-            <h2>OUR TEAM//</h2>
-            <article class="card">
-                <div class="icons"><img height="120px" border-radius="50%" src="/storage/emulated/0/Xender/image/f7ad2f7271f24d9085cf7d0a8998ff5c.jpg" ></div>
-                <h3>Maundu Kyalo</h3>
-                <p>Founder-He is the enterprenuer and the risk taker</p>
-                <button>contact</button>
-            </article>
-            <article class="card">
-                <div class="icons"><img height="120px" src="myimages/samuel.png"></div> 
-                <h3>Samuel Kyalo</h3>
-                <p>Business manager-controls and manages in and out flow of goods</p>
-                <button>contact</button>
-            </article>
-            <article class="card">
-                <div class="icons"><img height="120px" src="myimages/mumo.png"></div>
-                <h3>Mumo Kyalo</h3>
-                <p>Supplier-He distributes our goods to various parts of the country</p>
-                <button>contact</button>
-            </article>
-        </section>
-        <section>
-            <h2>MY ORDER</h2>
-            <form id="my-form">
-            <table style="windth: 100%; margin: auto">
-                <th>Orders</th>
-                <tr>
-                    <TD>My name</TD>
-                    <TD>
-                        <input type="text" size="15" name="myName" >
-                    </TD>
-                </tr>
-                <tr>
-                    <TD>Product to order</TD>
-                    <TD><select name="my-product">
-                        <option>HIFI stereo system</option>
-                        <option>GDsolar</option>
-                        <option>torch</option>
-                        <option>mobile phones</option>
-                        <option>Sony radio</option>
-                        <option>TV</option>
-                        <option>Woofer</option>
-                        <option>light bulb</option>
-                        <option>dlight solar</option>
-                    </select></TD>
-                </tr>
-                <tr>
-                    <TD>Quantity</TD>
-                    <TD>
-                        <input type="number" name="myQuantity" value="null" min="1" max="10" >
-                    </TD>
-                </tr>
-                <Br> <br>
-                <tr>
-                    <TD><input class="button" type="button" value="process order" onclick="placeOrder();"></TD>
-                    <TD><input class="button" type="reset" value="clear"></TD>
-                </tr>
-            </table>
-            <Br/>
-            <div id="my-order"></div>
-            </form>
-        </section>
-        <section>
-            <form>
-                <h1>Survey form</h1>
-                what is the silliest idea you have ever had? <Br/>
-                <input type="text" size="40"> <Br/><Br/>
-                <button>Submit</button>
-            </form>
-        </section>
-        <section style="background-color: grey">
-        <div id="footer"><h3>Thanks for visiting</h3><div class="container">
-            <article class="card">
-                <h3>Get in Touch</h3>
-                <p>Probably the best place to buy electronics.</p>
-            </article>
-            <article class="card">
-                <h3>Contact Us</h3>
-                <p>
-                    We would love to hear from your
-                    <Br/>Call or email us.<Br/>
-                    Mobile:0769234294<Br>
-                    email: maunduk33@gmail.com
-                </p>
-            </article>
+        <header>
+            <div class="nav-bar">
+                <img class="logo-img" src="assets/icons/mylogo.svg" alt="">
+                <div class="head-title">HYBRID TECHNOLOGIES</div>
+                <img src="assets/icons/menu icon.png" alt="" class="nav-btn">
             </div>
-            <div class="circle">M</div>
-            <div class="circle">E</div>
-            <div class="circle">A</div> <Br/>
-            &copy;2022 Maundu Electronics
-        </div>
-        </section>
-        <script>
-           function placeOrder() {
-               var orderForm= document.getElementById("my-form");
-                results = "<h3>Success!</h3>Here is your order";
-                var orderResults = document.getElementById("my-order");
-                orderResults.style.display= "block";
-                orderResults.innerHTML = results;
-            }
-        </script>
+        </header>
+        <main>
+            <div class="hero">
+                <img class="hero-bg" src="assets\images\herobg.jpg" alt="">
+                <div class="hero-topic">EXPERIENCE WITH HYBRID TECHNOLOGIES</div>
+                <div class="hero-content"><h1>The place to get up-to-date and satisfying services and gain high knowledge from modern equipments and experienced personel</h1></div>
+                <div class="hero-base"><h3>let's appriciate modern technology</h3></div>
+            </div>
+            <div class="mission">
+                <div class="mission-text">
+                    <p class="mission-topic"><h2>MISSION</h2></p>
+                    <p class="mission-message">Our institution aims to deliver quality digital products to our esteemed clients. also exposing our country to the digital world by educating our young ones for future advancement of technology</p>
+                </div>
+                <img class="banner-photo" src="assets/images/aibrain.jpg" alt="">
+            </div>
+            <div class="services">
+                <p class="services-topic"><h2>Our services</h2></p>
+                <p class="top-line">We deliver quality services like:</p>
+                <div class="list-grid">
+                    <div class="list1">
+                        <ul>
+                            <li>Bilboard design</li>
+                            <li>Posters</li>
+                            <li>Banners</li>
+                            <li>Company logo</li>
+                            <li>Business profile</li>
+                        </ul>
+                        <img class="plotter" src="assets/images/plotter.jpg" alt="">
+                    </div>
+                    <div class="list2">
+                        <ul>
+                            <li>Website design</li>
+                            <li>Mobile app development</li>
+                            <li>Software development</li>
+                            <li>Animations</li>
+                        </ul>
+                        <img class="code" src="assets/images/code.jpg" alt="">
+                    </div>
+                </div>
+                <p class="bottom-line">Beside that, we offer courses on selected fields. <br>To apply click <a href="https://www.youtube.com/feed/downloads">here</a></p>
+            </div>
+            <div class="team">
+                <div class="top-photo">
+                    <img class="screen" src="assets/images/screen.jpg" alt="">
+                </div>
+                <div class="bottom-photo">
+                    <img class="worker" src="assets/images/worker.jpg" alt="">
+                    <img class="team" src="assets/images/team.jpg" alt="">
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="cta">
+                <form class="leave-comment" method="POST" action="comments.php">
+                    <div class="top-line">Leave your comment:</div>
+                    <div class="commenter">
+                        Name:
+                        <input id="name" placeholder="your name" class="commenter-box" type="text" name="name">
+                    </div>
+                    <div class="their-email">
+                        Email:
+                        <input id="email" placeholder="your email" type="text" class="email-box" name="email">
+                    </div>
+                    <div class="comment">
+                        Comment:
+                        <input id="comment" placeholder="your comment" type="text" class="comment-box" name="comment">
+                    </div>
+                    <input class="btn" type="submit">
+                </form>
+                <div class="contacts">
+                    <div class="contact-topic">Contact Us</div>
+                    <div class="investor-email">Email:  info@hybridtechnologies.com</div>
+                    <div class="media-line">Social media:</div>
+                    <div class="media-info">
+                        <span><img class="media-rep" src="assets/icons/facebook icon.png" alt=""></span>facebook: Hybrid technologies 
+                        <br><span><img class="media-rep" src="assets/icons/ig-icon.svg" alt=""></span> instagram: Hybridtech
+                        <br><span><img class="media-rep" src="assets/icons/twiter icon.png" alt=""></span> twiter:  @hybridtech
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="designer">Designed by Hybrid Technologies</div>
+                <div class="copyright">&copy;copyright 2024 hybrid. All Rights Reserved.</div>
+            </div>
+        </main>
     </body>
 </html>
